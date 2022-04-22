@@ -34,12 +34,11 @@
 
 <main>
   <div class="info">
-    <h1>Infinite Objects Chromie Squiggle Capture</h1>
-    <h2>Modified from <a target="_blank" href="https://twitter.com/mattdesl">@mattdesl</a>'s <a href="https://github.com/mattdesl/artblocks-renderer">ArtBlocks Renderer</a></h2>
-    <p>
-      Enter your configuration and click the <strong>Render</strong> button to export
-      the high quality media.
-    </p>
+    <h1>Infinite Objects Squiggle Capture</h1>
+    
+    <h2>
+      Enter your Squiggle ID and click the <strong>Render</strong> button.
+    </h2>
     <p>
       Spacebar KeyPresses: 10
     </p>
@@ -160,6 +159,8 @@
       <button on:click={startRender} class="render button">Render</button>
     </div>
   {/if}
+  <br><br>
+  <p>Modified from <a target="_blank" href="https://twitter.com/mattdesl">@mattdesl</a>'s <a href="https://github.com/infiniteobjects/artblocks-renderer">ArtBlocks Renderer</a></p>
 </main>
 
 <style>
