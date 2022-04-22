@@ -5,7 +5,7 @@
 
   let id = "4161";
   let fps = 60;
-  let fpsPresets = [];
+  let fpsPresets = [30,60];
   let duration = 10;
   let width = 1536;
   let height = 1024;
@@ -97,7 +97,7 @@
       {/if}
       <div class="field fps-container" class:hidden={format === 'inline' || format === "png"}>
         <caption>Framerate</caption>
-        <input disabled
+        <input 
           class="fps"
           min="1"
           step="1"
@@ -173,7 +173,7 @@
   :global(body) {
     margin: 20px;
   }
-  
+
   a {
       color:aquamarine;
     }
