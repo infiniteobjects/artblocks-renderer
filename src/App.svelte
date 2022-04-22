@@ -173,6 +173,9 @@
   :global(body) {
     margin: 20px;
   }
+  :global(a) {
+  color:aquamarine;
+  }
 
   .dither-box {
     display: flex;
