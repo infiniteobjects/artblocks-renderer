@@ -7,8 +7,8 @@
   let fps = 60;
   let fpsPresets = [24, 25, 30, 50, 60];
   let duration = 10;
-  let width = 2994;
-  let height = 1996;
+  let width = 1536;
+  let height = 1024;
   let format = "mp4";
   let dithering = false;
 
