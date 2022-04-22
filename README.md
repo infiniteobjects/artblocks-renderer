@@ -1,10 +1,12 @@
 # artblocks-renderer
 
-video renderer
+Chromie Squiggle Video Renderer
+
+Modified for Infinite Objects capture.
 
 ## Usage
 
-[![NPM](https://nodei.co/npm/artblocks-renderer.png)](https://www.npmjs.com/package/artblocks-renderer)
+Deployed to: [https://infinite-squiggle-capture.netlify.app](https://infinite-squiggle-capture.netlify.app)
 
 ## License
 
