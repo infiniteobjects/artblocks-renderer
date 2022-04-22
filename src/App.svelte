@@ -35,7 +35,7 @@
 <main>
   <div class="info">
     <h1>Infinite Objects Squiggle Capture</h1>
-    
+    <hr>
     <h2>
       Enter your Squiggle ID and click the <strong>Render</strong> button.
     </h2>
@@ -165,8 +165,8 @@
 
 <style>
   :root {
-    font-family: "Source Code Pro", "Courier New", monospace;
-    font-size: 12px;
+    font-family: "Helvetica", monospace;
+    font-size: 14px;
     color:azure;
     background-color: black;
   }
