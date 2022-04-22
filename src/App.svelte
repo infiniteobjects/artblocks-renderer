@@ -5,7 +5,7 @@
 
   let id = "4161";
   let fps = 60;
-  let fpsPresets = [24, 25, 30, 50, 60];
+  let fpsPresets = [];
   let duration = 10;
   let width = 1536;
   let height = 1024;
@@ -41,8 +41,7 @@
       the high quality media.
     </p>
     <p>
-      Made by
-      .
+      
     </p>
   </div>
   {#if rendering}
@@ -76,11 +75,11 @@
         <caption>Format</caption>
         <select bind:value={format}>
           <!-- <option value="gif">gif</option> -->
-          <option value="png">png still</option>
-          <option value="inline">inline</option>
-          {#if isFrameSequenceSupported()}
-            <option value="frames">png sequence</option>
-          {/if}
+          <!-- <option value="png">png still</option> -->
+          <!-- <option value="inline">inline</option> -->
+          <!-- {#if isFrameSequenceSupported()} -->
+            <!-- <option value="frames">png sequence</option> -->
+          <!-- {/if} -->
           {#await canUseMP4() then canUse}
             {#if canUse}
               <option value="mp4" selected>mp4</option>
@@ -99,7 +98,7 @@
       {/if}
       <div class="field fps-container" class:hidden={format === 'inline' || format === "png"}>
         <caption>Framerate</caption>
-        <input
+        <input disabled
           class="fps"
           min="1"
           step="1"
