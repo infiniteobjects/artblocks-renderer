@@ -41,7 +41,7 @@
       the high quality media.
     </p>
     <p>
-      
+      Spacebar KeyPresses: 10
     </p>
   </div>
   {#if rendering}
@@ -73,7 +73,7 @@
       </div>
       <div class="field dimensions-container">
         <caption>Format</caption>
-        <select bind:value={format}>
+        <select bind:value={format} disabled>
           <!-- <option value="gif">gif</option> -->
           <!-- <option value="png">png still</option> -->
           <!-- <option value="inline">inline</option> -->
@@ -166,6 +166,8 @@
   :root {
     font-family: "Source Code Pro", "Courier New", monospace;
     font-size: 12px;
+    color:azure;
+    background-color: black;
   }
   :global(body) {
     margin: 20px;
