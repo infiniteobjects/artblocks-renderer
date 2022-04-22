@@ -3,13 +3,13 @@
   import Progress from "./Progress.svelte";
   import { isFrameSequenceSupported } from "./recording";
 
-  let id = "9000139";
-  let fps = 30;
+  let id = "4161";
+  let fps = 60;
   let fpsPresets = [24, 25, 30, 50, 60];
-  let duration = 4;
-  let width = 512;
-  let height = 512;
-  let format = "gif";
+  let duration = 10;
+  let width = 2994;
+  let height = 1996;
+  let format = "mp4";
   let dithering = false;
 
   let rendering = false;
@@ -34,14 +34,15 @@
 
 <main>
   <div class="info">
-    <h1>ArtBlocks Recorder</h1>
+    <h1>Infinite Objects Chromie Squiggle Capture</h1>
+    <h2>Modified from <a target="_blank" href="https://twitter.com/mattdesl">@mattdesl</a>'s <a href="https://github.com/mattdesl/artblocks-renderer">ArtBlocks Renderer</a></h2>
     <p>
       Enter your configuration and click the <strong>Render</strong> button to export
       the high quality media.
     </p>
     <p>
       Made by
-      <a target="_blank" href="https://twitter.com/mattdesl">@mattdesl</a>.
+      .
     </p>
   </div>
   {#if rendering}
@@ -74,15 +75,15 @@
       <div class="field dimensions-container">
         <caption>Format</caption>
         <select bind:value={format}>
-          <option value="gif">gif</option>
+          <!-- <option value="gif">gif</option> -->
           <option value="png">png still</option>
-          <!-- <option value="inline">inline</option> -->
+          <option value="inline">inline</option>
           {#if isFrameSequenceSupported()}
             <option value="frames">png sequence</option>
           {/if}
           {#await canUseMP4() then canUse}
             {#if canUse}
-              <option value="mp4">mp4</option>
+              <option value="mp4" selected>mp4</option>
             {/if}
           {/await}
         </select>
@@ -114,7 +115,7 @@
           >
         {/each}
       </div>
-      <div class="field duration-container" class:hidden={format === 'inline' || format === "png"}>
+      <!-- <div class="field duration-container" class:hidden={format === 'inline' || format === "png"}>
         <caption>Duration</caption>
         <input
           class="duration"
@@ -124,7 +125,7 @@
           bind:value={duration}
         />
         <span class="unit">seconds</span>
-      </div>
+      </div> -->
       <div class="field dimensions-container">
         <caption>Dimensions</caption>
         <input

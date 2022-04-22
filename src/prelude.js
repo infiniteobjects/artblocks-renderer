@@ -111,6 +111,11 @@ export default function getPrelude(opts = {}) {
         const canvas = findCanvas();
         if (!canvas) return console.warn("no canvas");
 
+        for (var i=0;i<10;i++) {
+          window.dispatchEvent( new KeyboardEvent('keydown', {keyCode: 32}));
+          window.dispatchEvent( new KeyboardEvent('keyup', {keyCode: 32}));
+        }
+
         if (clickOnStart) canvas.click();
 
         // const tmpCanvas = document.createElement('canvas');

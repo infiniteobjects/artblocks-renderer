@@ -13,7 +13,7 @@
   const dispatch = createEventDispatcher();
 
   export let id = "0";
-  export let fps = 30;
+  export let fps = 60;
   export let width = 1080;
   export let height = 1080;
   export let format = "mp4";
@@ -38,12 +38,16 @@
   $: promise = start(id);
 
   async function receive(evt) {
-    // console.log(evt, evt.data);
+    //console.log(evt, evt.data);
     const iframe = evt.source;
     const data = evt.data;
+
+    console.log(data.frame)
+
     if (data.event === "start") {
       if (hasProgress) dispatch("progress", 0);
       if (encoder) {
+        
         iframe.postMessage({ event: "start" }, "*");
       } else {
         if (hasProgress) dispatch("finish");
@@ -74,7 +78,9 @@
         },
         "*"
       );
-    } else if (data.event === "finish") {
+    } 
+    
+    if (data.event === "finish" || data.frame >= 254) {
       const buf = await encoder.finish();
       if (hasProgress) {
         dispatch("progress", 1);
@@ -211,7 +217,7 @@
     font-size: 12px;
   }
   iframe {
-    pointer-events: none;
+    /*pointer-events: none;*/
     border: none;
     visibility: hidden;
   }
