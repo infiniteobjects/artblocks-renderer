@@ -56,6 +56,7 @@ export default (data, opts = {}) => {
     tokenData: `<script>let tokenData = ${JSON.stringify(tokenData)};</script>`,
     script: `<script>${data.project.script}</script>`,
   });
+  console.log('doc', doc);
   return doc;
 };
 

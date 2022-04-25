@@ -38,7 +38,7 @@
   $: promise = start(id);
 
   async function receive(evt) {
-    //console.log(evt, evt.data);
+    console.log(evt, evt.data);
     const iframe = evt.source;
     const data = evt.data;
 
@@ -101,6 +101,8 @@
 
   async function start(id) {
     const data = await fetchData(id);
+
+    console.log("data", data);
 
     const autoWidth = !width;
     const autoHeight = !height;
@@ -176,6 +178,10 @@
     const projNumber = Math.floor(idNum / C);
     const project = await fetchProject(projNumber);
     const token = await fetchToken(id);
+
+    console.log("project", project);
+    console.log("token", token);
+    
     return {
       id,
       project,
